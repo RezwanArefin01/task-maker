@@ -1,4 +1,5 @@
 #include "util/sha256.hpp"
+#include <stdexcept>
 #include <string.h>
 
 #define SHA2_SHFR(x, n) (x >> n)

@@ -4,6 +4,7 @@
 #include <kj/debug.h>
 #include <algorithm>
 #include <fstream>
+#include <stdexcept>
 #include "capnp/cache.capnp.h"
 #include "util/file.hpp"
 #include "util/flags.hpp"

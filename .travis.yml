@@ -19,6 +19,10 @@ matrix:
         - RELEASE_FILE=task-maker-${TRAVIS_TAG}_ubuntu19.04_amd64.deb
     - env:
         - WHAT=test
+        - TOOLCHAIN=ubuntu20.04
+        - RELEASE_FILE=task-maker-${TRAVIS_TAG}_ubuntu20.04_amd64.deb
+    - env:
+        - WHAT=test
         - TOOLCHAIN=archlinux
         - RELEASE_FILE=task-maker-${TRAVIS_TAG}_archlinux_amd64.tar.xz
     - if: NOT branch =~ /^v.*/

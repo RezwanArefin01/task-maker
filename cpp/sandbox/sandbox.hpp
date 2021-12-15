@@ -2,6 +2,7 @@
 #define SANDBOX_SANDBOX_HPP
 
 #include <cstring>
+#include <stdexcept>
 #include <functional>
 #include <memory>
 #include <string>

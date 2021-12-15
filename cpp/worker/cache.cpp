@@ -1,6 +1,7 @@
 #include "worker/cache.hpp"
 #include "util/file.hpp"
 #include "util/flags.hpp"
+#include <stdexcept>
 
 namespace worker {
 

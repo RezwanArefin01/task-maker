@@ -1,6 +1,7 @@
 #include "util/union_promise.hpp"
 #include <kj/async.h>
 #include <kj/debug.h>
+#include <algorithm>
 #include <bitset>
 #include <random>
 #include <vector>
