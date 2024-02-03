@@ -21,6 +21,17 @@ At [releases](https://github.com/algorithm-ninja/task-maker/releases) you
 can find prebuilt .deb files. To install them you can issue:
 `sudo dpkg -i that_file.deb` and then `sudo apt --fix-broken install`.
 
+### Ubuntu 22.04
+```bash
+mkdir build
+cd build
+CXXFLAGS="-Wno-error=maybe-uninitialized" cmake ..
+sudo apt-get install python3-dev -y
+make -j8
+cd python
+pip3 install -r requirements.txt
+sudo python3 setup.py install
+```
 ## Usage
 
 ### Simple local usage

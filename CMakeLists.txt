@@ -8,19 +8,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-include(HunterGate)
+include("cmake/HunterGate.cmake")
 include(AddressSanitizer)
 include(MemorySanitizer)
 include(ThreadSanitizer)
 include(UndefinedSanitizer)
 include(RemoveFlags)
 
-huntergate(URL
-           "https://github.com/ruslo/hunter/archive/v0.23.54.tar.gz"
-           SHA1
-           "64ae727ebaec586c84da5d69e5c37b5962baccd6"
-           FILEPATH
-           "${CMAKE_CURRENT_LIST_DIR}/cmake/config.cmake")
+HunterGate(
+    URL "https://github.com/cpp-pm/hunter/archive/v0.23.297.tar.gz"
+    SHA1 "3319fe6a3b08090df7df98dee75134d68e2ef5a3"
+    FILEPATH "${CMAKE_CURRENT_LIST_DIR}/cmake/config.cmake"
+)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
 
@@ -48,8 +47,8 @@ find_package(PythonInterp 3.5 REQUIRED)
 # Enable colors in ninja
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fdiagnostics-color=always")
 # Other flags
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wno-unused-parameter -g")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -O3")
 
 # if hunter is disabled all these lines are noop
 hunter_add_package(GTest)
